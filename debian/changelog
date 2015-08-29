@@ -1,0 +1,77 @@
+lernstick-mount-exchange-exam (1) lernstick-8; urgency=medium
+
+  * renamed package for lernstick-8
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Sat, 29 Aug 2015 07:26:38 +0200
+
+lernstick-mount-exchange-wheezy-pu (1.10-1) unstable; urgency=low
+
+  * added support for new partitioning schema for removable USB flash drives
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Wed, 14 May 2014 18:21:45 +0200
+
+lernstick-mount-exchange-wheezy-pu (1.9-1) unstable; urgency=low
+
+  * adopted to new partitioning schema
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Wed, 09 Apr 2014 18:58:55 +0200
+
+lernstick-mount-exchange-wheezy-pu (1.8-1) unstable; urgency=low
+
+  * added mount options for FAT32 partitions
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Thu, 13 Mar 2014 09:50:29 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.7-1) unstable; urgency=low
+
+  * fixed mount dir permissions
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Mon, 10 Mar 2014 08:45:34 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.6-1) unstable; urgency=low
+
+  * log mount operation
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Tue, 04 Mar 2014 18:56:55 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.5-1) unstable; urgency=low
+
+  * fixed mount script
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Tue, 04 Mar 2014 18:24:49 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.4-1) unstable; urgency=low
+
+  * made mounting file system independent
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Tue, 04 Mar 2014 14:50:52 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.3-1) unstable; urgency=low
+
+  * fixed umask for root-only use case 
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Thu, 28 Nov 2013 17:46:40 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.2-1) unstable; urgency=low
+
+  * added support for different user access options
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Thu, 28 Nov 2013 16:04:14 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.1-1) unstable; urgency=low
+
+  * use udisks for mounting
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Sat, 09 Nov 2013 10:02:00 +0100
+
+lernstick-mount-exchange-wheezy-pu (1.0-2) unstable; urgency=low
+
+  * fixed description
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Fri, 20 Sep 2013 10:14:36 +0200
+
+lernstick-mount-exchange-wheezy-pu (1.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Ronny Standtke <ronny.standtke@fhnw.ch>  Fri, 20 Sep 2013 08:37:47 +0200

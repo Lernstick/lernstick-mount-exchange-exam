@@ -1,0 +1,12 @@
+Source: lernstick-mount-exchange-exam
+Section: admin
+Priority: required
+Maintainer: Lernstick Team <lernstick.ph@fhnw.ch>
+Uploaders: Ronny Standtke <ronny.standtke@fhnw.ch>, Gaudenz Steinlin <gaudenz.steinlin@cirrax.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.7.3
+
+Package: lernstick-mount-exchange-exam
+Architecture: all
+Description: initscript to automount the exchange partition
+ A script for the exam environment to automount the exchange partition.

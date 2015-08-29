@@ -1,0 +1,6 @@
+build-stamp
+configure-stamp
+debian/files
+debian/lernstick-mount-exchange-exam/
+debian/lernstick-mount-exchange-exam.debhelper.log
+debian/lernstick-mount-exchange-exam.substvars
