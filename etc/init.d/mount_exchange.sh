@@ -63,24 +63,24 @@ start_it_up()
 	echo "second partition: \"${SECOND_PARTITION}\"" >> ${LOG}
 
 
-	if [ "${FIRST_LABEL}" = "boot" ]
+	if [ "${FIRST_LABEL}" = "boot" -o "${FIRST_LABEL}" = "EFI" ]
 	then
-		# system uses the current partitioning schema with a separate boot partition
+		# system uses the current partitioning schema with a separate boot/EFI partition
 		# check if the second partition is the exchange partition
 		check_fstype ${SECOND_PARTITION}
 
 	else
 		SECOND_LABEL="$(get_partition_label ${SECOND_PARTITION})"
 		echo "second label: \"${SECOND_LABEL}\"" >> ${LOG}
-		if [ "${SECOND_LABEL}" = "boot" ]
+		if [ "${SECOND_LABEL}" = "boot" -o "${SECOND_LABEL}" = "EFI" ]
 		then
-			# system uses the current partitioning schema with a separate boot partition
+			# system uses the current partitioning schema with a separate boot/EFI partition
 			# but for legacy (removable) USB flash drives
 			# the first partition is the exchange partition
 			EXCHANGE_PARTITION=${FIRST_PARTITION}
 
 		else
-			# system uses the legacy partitioning schema without a separate boot partition
+			# system uses the legacy partitioning schema without a separate boot/EFI partition
 			# check if the first partition is the system partition (also FAT32)
 			if [ "${FIRST_PARTITION}" = "${SYSTEM_PARTITION}" ]
 			then
@@ -100,7 +100,7 @@ start_it_up()
 	then
 	        . ${CONFIG_FILE}
 	fi
-	MOUNT_DIR="/mnt/exchange/"
+	MOUNT_DIR="/exchange/"
 	MOUNT_POINT="${MOUNT_DIR}/partition"
 	mkdir -p "${MOUNT_POINT}"
 	chown root.root "${MOUNT_DIR}"
