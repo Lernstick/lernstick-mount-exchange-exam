@@ -1,3 +1,9 @@
+lernstick-mount-exchange-exam (3) lernstick-8; urgency=medium
+
+  * [e73ed3] enforce iocharset=utf8 for vfat (needed since Linux kernel 4.7)
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Sat, 12 Nov 2016 19:52:20 +0100
+
 lernstick-mount-exchange-exam (2) lernstick-8; urgency=medium
 
   * [20cd4f] added support for EFI partition, changed mountpoint (outside of /mnt/)
