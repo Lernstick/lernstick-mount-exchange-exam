@@ -104,14 +104,25 @@ start_it_up()
 	MOUNT_POINT="${MOUNT_DIR}/partition"
 	mkdir -p "${MOUNT_POINT}"
 	chown root.root "${MOUNT_DIR}"
+	FS_TYPE="$(get_partition_fstype ${EXCHANGE_PARTITION})"
+	echo "file system of exchange partition: \"${FS_TYPE}\"" >> ${LOG}
+	if [ "${FS_TYPE}" = "vfat" ]
+	then
+		# In Linux kernel 4.7 the default iocharset for vfat changed from utf8
+		# to ascii. This freaked out rdiff-backup because it then detected that case
+		# sensitivity on the destination file system is off and therefore encoded
+		# all upper-case letters with a combination of semicolon and decimal ascii
+		# code, e.g. "B" -> ";66". This again freaked out Windows that was no longer
+		# able to read or delete files on the exchange partition.
+		# Therefore we now enforce the iocharset of utf8 for vfat file systems.
+		MOUNT_OPTIONS="iocharset=utf8"
+	fi
 	if [ "${ExchangeAccess}" = "true" ]
 	then
 		MODE="755"
-		FS_TYPE="$(get_partition_fstype ${EXCHANGE_PARTITION})"
-		echo "file system of exchange partition: \"${FS_TYPE}\"" >> ${LOG}
 		if [ "${FS_TYPE}" = "vfat" ]
 		then
-			MOUNT_OPTIONS="umask=000"
+			MOUNT_OPTIONS="${MOUNT_OPTIONS},umask=000"
 		fi
 	else
 		MODE="700"
