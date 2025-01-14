@@ -63,7 +63,7 @@ start_it_up()
 	echo "second partition: \"${SECOND_PARTITION}\"" >> ${LOG}
 
 
-	if [ "${FIRST_LABEL}" = "boot" -o "${FIRST_LABEL}" = "EFI" ]
+	if [ "${FIRST_LABEL}" = "boot" -o "${FIRST_LABEL}" = "EFI" -o "${FIRST_LABEL}" = "Lernstick" ]
 	then
 		# system uses the current partitioning schema with a separate boot/EFI partition
 		# check if the second partition is the exchange partition
@@ -72,7 +72,7 @@ start_it_up()
 	else
 		SECOND_LABEL="$(get_partition_label ${SECOND_PARTITION})"
 		echo "second label: \"${SECOND_LABEL}\"" >> ${LOG}
-		if [ "${SECOND_LABEL}" = "boot" -o "${SECOND_LABEL}" = "EFI" ]
+		if [ "${SECOND_LABEL}" = "boot" -o "${SECOND_LABEL}" = "EFI" -o "${SECOND_LABEL}" = "Lernstick" ]
 		then
 			# system uses the current partitioning schema with a separate boot/EFI partition
 			# but for legacy (removable) USB flash drives
