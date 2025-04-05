@@ -1,3 +1,13 @@
+lernstick-mount-exchange-exam (4) lernstick-12; urgency=medium
+
+  [ Jörg Berkel ]
+  * [eb8d35] Update mount_exchange.sh
+
+  [ Ronny Standtke ]
+  * [00b9c7] code cleanup
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Sat, 05 Apr 2025 21:57:53 +0200
+
 lernstick-mount-exchange-exam (3) lernstick-8; urgency=medium
 
   * [e73ed3] enforce iocharset=utf8 for vfat (needed since Linux kernel 4.7)
